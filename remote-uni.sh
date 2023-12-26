@@ -1,6 +1,5 @@
-# Check if cloudflared exists
+
 if [ ! -f "cloudflared" ]; then
-    # Download cloudflared based on architecture
     ARCH=$(uname -m)
     case $ARCH in
         x86_64)
@@ -23,7 +22,6 @@ if [ ! -f "cloudflared" ]; then
     chmod +x cloudflared
 fi
 
-# Ask user to confirm before proceeding
 echo "=========================================================================================================================="
 echo "WARNING: Cloudflare Tunnel!"
 echo "=========================================================================================================================="
@@ -36,5 +34,4 @@ echo "By continuing, you confirm that you understand the risks associated with c
 echo ""
 read -p "Press enter to continue or Ctrl+C to cancel"
 
-# Create a new tunnel using cloudflared
 ./cloudflared tunnel --url localhost:8000
