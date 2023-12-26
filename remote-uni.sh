@@ -1,5 +1,3 @@
-#!/bin/bash
-
 # Check if cloudflared exists
 if [ ! -f "cloudflared" ]; then
     # Download cloudflared based on architecture
