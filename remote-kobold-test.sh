@@ -32,4 +32,4 @@ echo ""
 echo "By continuing, you confirm that you understand the risks associated with creating a publicly accessible tunnel and agree to use it responsibly."
 echo ""
 read -p "Press enter to continue or Ctrl+C to cancel"
-./koboldcpp-linux-x64 & ./cloudflared tunnel --url localhost:5001
+./koboldcpp-linux-x64 --contextsize 4096  & ./cloudflared tunnel --url localhost:5001
