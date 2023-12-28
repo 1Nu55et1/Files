@@ -34,4 +34,4 @@ echo "By continuing, you confirm that you understand the risks associated with c
 echo ""
 read -p "Press enter to continue or Ctrl+C to cancel"
 
-./cloudflared tunnel --url localhost:8000
+./start.sh & ./cloudflared tunnel --url localhost:8000
